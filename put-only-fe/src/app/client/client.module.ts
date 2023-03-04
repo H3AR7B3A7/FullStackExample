@@ -6,6 +6,8 @@ import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatSortModule } from '@angular/material/sort'
 import { SharedModule } from '../shared/shared.module'
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [ClientComponent, ClientOverviewComponent],
@@ -15,6 +17,8 @@ import { SharedModule } from '../shared/shared.module'
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCheckboxModule,
+    MatButtonModule,
   ],
 })
 export class ClientModule {}

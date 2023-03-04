@@ -1,3 +1,29 @@
+@import "src/assets/style/mixins";
+@import "src/assets/style/light-theme";
+@import "src/assets/style/dark-theme";
+@import "src/assets/style/contrast-theme";
+
 .spacer {
   flex: 1 1 auto;
+}
+
+mat-form-field {
+  position: relative;
+  top: 11px;
+}
+
+/*
+ * To get around the mat-select list-box being created after css is loaded
+ */
+
+::ng-deep .light-theme {
+  @include custom-theme-delayed($light-theme);
+}
+
+::ng-deep .dark-theme {
+  @include custom-theme-delayed($dark-theme);
+}
+
+::ng-deep .contrast-theme {
+  @include custom-theme-delayed($contrast-theme);
 }

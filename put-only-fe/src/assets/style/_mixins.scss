@@ -9,13 +9,31 @@
   height: 100%;
 
   // Custom Variables
-  $palette-color: map-get($theme, color);
-  $background: map-get($palette-color, background);
-  $background-color: map-get($background, background);
+  $color-palettes: map-get($theme, color);
+  $background-palette: map-get($color-palettes, background);
+  $background: map-get($background-palette, background);
 
   // Custom Components
   & .mat-mdc-table,
-  .mat-mdc-paginator {
-    background-color: $background-color;
+  .mat-mdc-paginator,
+  .mat-mdc-text-field-wrapper {
+    background-color: $background !important;
+  }
+}
+
+/**
+ * Mixin to help set the defaults for a custom theme on delayed mat-select drop-down
+ */
+@mixin custom-theme-delayed($theme) {
+  $color-palettes: map-get($theme, color);
+  $background-palette: map-get($color-palettes, background);
+  $background: map-get($background-palette, background);
+  $primary-pallete: map-get($color-palettes, primary);
+  $primary: mat.get-color-from-palette($primary-pallete, 500);
+
+  background-color: $background;
+
+  & .mat-mdc-option-active .mdc-list-item__primary-text {
+    color: $primary !important;
   }
 }

@@ -4,10 +4,16 @@
   </button>
   <span>My App</span>
   <span class="spacer"></span>
-  <button mat-icon-button>
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>share</mat-icon>
-  </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Theme</mat-label>
+    <mat-select
+      class="theme-select"
+      [formControl]="currentTheme"
+      [panelClass]="currentTheme.value!"
+    >
+      <mat-option *ngFor="let theme of themes" [value]="theme">
+        {{ theme }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </mat-toolbar>

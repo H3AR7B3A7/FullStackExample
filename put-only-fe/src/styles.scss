@@ -6,6 +6,8 @@
 @import "src/assets/style/dark-theme";
 @import "src/assets/style/contrast-theme";
 
+@include mat.all-component-themes($light-theme);
+
 * {
   margin: 0;
   padding: 0;

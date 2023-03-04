@@ -10,6 +10,8 @@ $light-theme: mat.define-light-theme(
       accent: $accent-light,
       warn: $warn-light,
     ),
+    typography: mat.define-typography-config(),
+    density: 0,
   )
 );
 
