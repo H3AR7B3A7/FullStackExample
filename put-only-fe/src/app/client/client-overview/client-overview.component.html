@@ -1,0 +1,25 @@
+<div class="wrapper mat-elevation-z8">
+  <table mat-table [dataSource]="(dataSource$ | async)!" matSort>
+    <!-- Position Column -->
+    <ng-container matColumnDef="clientId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Client ID</th>
+      <td mat-cell *matCellDef="let client">{{ client.clientId }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="secured">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Secured</th>
+      <td mat-cell *matCellDef="let client">{{ client.secured }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

@@ -1,0 +1,72 @@
+@use "node_modules/@angular/material/index" as mat;
+@import "colors";
+
+$primary: (
+  50: $primary-light-50,
+  100: $primary-light-100,
+  200: $primary-light-200,
+  300: $primary-light-300,
+  400: $primary-light-400,
+  500: $primary-light-500,
+  600: $primary-light-600,
+  700: $primary-light-700,
+  800: $primary-light-800,
+  900: $primary-light-900,
+  A100: $primary-light-A100,
+  A200: $primary-light-A200,
+  A400: $primary-light-A400,
+  A700: $primary-light-A700,
+  contrast: (
+    50: $black,
+    100: $black,
+    200: $black,
+    300: $black,
+    400: $white,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
+    A100: $black,
+    A200: $black,
+    A400: $black,
+    A700: $black,
+  ),
+);
+
+$accent: (
+  50: #f6f3e0,
+  100: #e9e0b3,
+  200: #dacb80,
+  300: #cbb64d,
+  400: #bfa726,
+  500: #b49700,
+  600: #ad8f00,
+  700: #a48400,
+  800: #9c7a00,
+  900: #8c6900,
+  A100: #ffeab8,
+  A200: #ffdb85,
+  A400: #ffcb52,
+  A700: #ffc439,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$primary-light: mat.define-palette($primary);
+$accent-light: mat.define-palette($accent, A200, A100, A400);
+$warn-light: mat.define-palette(mat.$red-palette);

@@ -1,0 +1,16 @@
+@use "@angular/material" as mat;
+@import "contrast-palette";
+@import "functions";
+@import "colors";
+
+$contrast-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary-dark,
+      accent: $accent-dark,
+      warn: $warn-dark,
+    ),
+  )
+);
+
+$contrast-theme: mat-set-background($contrast-theme, $black);

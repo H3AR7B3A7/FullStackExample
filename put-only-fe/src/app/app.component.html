@@ -1,0 +1,14 @@
+<div [ngClass]="theme$ | async" class="mat-app-background">
+  <app-header></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav
+      [opened]="sidenav$ | async"
+      (openedChange)="openChanged($event)"
+      mode="over"
+      >Sidenav content</mat-sidenav
+    >
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

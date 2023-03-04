@@ -1,0 +1,25 @@
+/**
+ * Function to help set a custom background for a material theme
+ */
+@function mat-set-background($theme, $backgroundColor) {
+  $palette-color: map-get($theme, color);
+  $background: map-get($palette-color, background);
+  $background: map_merge(
+    $background,
+    (
+      background: $backgroundColor,
+    )
+  );
+  $palette-color: map_merge(
+    $palette-color,
+    (
+      background: $background,
+    )
+  );
+  @return map_merge(
+    $theme,
+    (
+      color: $palette-color,
+    )
+  );
+}

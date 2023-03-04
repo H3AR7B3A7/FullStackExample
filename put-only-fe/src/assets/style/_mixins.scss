@@ -1,0 +1,21 @@
+@use "@angular/material" as mat;
+
+/**
+ * Mixin to help set the defaults for a custom theme
+ */
+@mixin custom-theme($theme) {
+  // Defaults
+  @include mat.all-component-colors($theme);
+  height: 100%;
+
+  // Custom Variables
+  $palette-color: map-get($theme, color);
+  $background: map-get($palette-color, background);
+  $background-color: map-get($background, background);
+
+  // Custom Components
+  & .mat-mdc-table,
+  .mat-mdc-paginator {
+    background-color: $background-color;
+  }
+}

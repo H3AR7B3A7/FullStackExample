@@ -1,0 +1,71 @@
+@use "node_modules/@angular/material/index" as mat;
+
+$primary: (
+  50: #1c2c33,
+  100: #223a43,
+  200: #284853,
+  300: #2e5663,
+  400: #345472,
+  500: #3a6282,
+  600: #406092,
+  700: #467ea1,
+  800: #4c8cb1,
+  900: #529ac1,
+  A100: #0066cc,
+  A200: #0052b3,
+  A400: #003d99,
+  A700: #003380,
+  contrast: (
+    50: #ffffff,
+    100: #ffffff,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$accent: (
+  50: #3c3326,
+  100: #524537,
+  200: #694d49,
+  300: #81555b,
+  400: #986d6d,
+  500: #b1857f,
+  600: #ba8d87,
+  700: #c3958f,
+  800: #cc9c97,
+  900: #d4a4a0,
+  A100: #cc8533,
+  A200: #bf6b00,
+  A400: #b25000,
+  A700: #aa3c00,
+  contrast: (
+    50: #ffffff,
+    100: #ffffff,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$primary-dark: mat.define-palette($primary);
+$accent-dark: mat.define-palette($accent, A200, A100, A400);
+$warn-dark: mat.define-palette(mat.$red-palette);

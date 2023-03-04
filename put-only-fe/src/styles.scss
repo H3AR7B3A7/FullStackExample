@@ -1,0 +1,34 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+@import "src/assets/style/mixins";
+@import "src/assets/style/light-theme";
+@import "src/assets/style/dark-theme";
+@import "src/assets/style/contrast-theme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.light-theme {
+  @include custom-theme($light-theme);
+}
+
+.dark-theme {
+  @include custom-theme($dark-theme);
+}
+
+.contrast-theme {
+  @include custom-theme($contrast-theme);
+}
