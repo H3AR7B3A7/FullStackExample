@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { HomeComponent } from '@app/home/home.component'
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'client',
+    redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    title: $localize`Home`,
+    path: 'home',
+    component: HomeComponent,
   },
   {
     title: $localize`Clients`,

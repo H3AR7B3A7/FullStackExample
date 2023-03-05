@@ -1,18 +1,20 @@
 {
-  "locale": "en",
+  "locale": "de",
   "translations": {
-    "5910845130937645353": "Clients",
-    "5273501066845923426": "Client ID",
+    "133478753074369062": "Eine Beispielanwendung für Materialdesign",
+    "1648472582356305138": "Lichtthema",
+    "1810130218338094013": "Kontrastthema",
+    "2236258982969072392": "Beispielanwendung",
+    "2821179408673282599": "Startseite",
     "3849708118318844348": "Gesichert",
-    "paginator.zeroRange": "0 von {$PH}",
-    "paginator.rangeOfLabel": "{$PH} - {$PH_1} von {$PH_2}",
+    "5273501066845923426": "Client ID",
+    "5824507108095419704": "Dunkles Thema",
+    "5910845130937645353": "Clients",
+    "7103588127254721505": "Thema",
     "paginator.displayPerPage": "Objekte pro Seite",
     "paginator.nextPage": "Nächste Seite",
     "paginator.prevPage": "Vorherige Seite",
-    "2236258982969072392": "Beispielanwendung",
-    "7103588127254721505": "Thema",
-    "1648472582356305138": "Lichtthema",
-    "5824507108095419704": "Dunkles Thema",
-    "1810130218338094013": "Kontrastthema"
+    "paginator.rangeOfLabel": "{$PH} - {$PH_1} von {$PH_2}",
+    "paginator.zeroRange": "0 von {$PH}"
   }
 }

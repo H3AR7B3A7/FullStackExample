@@ -1,18 +1,20 @@
 {
   "locale": "nl",
   "translations": {
-    "5910845130937645353": "Clients",
-    "5273501066845923426": "Client ID",
+    "133478753074369062": "Een voorbeeldmaterial design applicatie",
+    "1648472582356305138": "Licht Thema",
+    "1810130218338094013": "Contrast Thema",
+    "2236258982969072392": "Voorbeeld Applicatie",
+    "2821179408673282599": "Startpagina",
     "3849708118318844348": "Beveiligd",
-    "paginator.zeroRange": "0 van {$PH}",
-    "paginator.rangeOfLabel": "{$PH} - {$PH_1} van {$PH_2}",
+    "5273501066845923426": "Client ID",
+    "5824507108095419704": "Donker Thema",
+    "5910845130937645353": "Clients",
+    "7103588127254721505": "Thema",
     "paginator.displayPerPage": "Items per pagina",
     "paginator.nextPage": "Volgende pagina",
     "paginator.prevPage": "Vorige pagina",
-    "2236258982969072392": "Voorbeeld Applicatie",
-    "7103588127254721505": "Thema",
-    "1648472582356305138": "Licht Thema",
-    "5824507108095419704": "Donker Thema",
-    "1810130218338094013": "Contrast Thema"
+    "paginator.rangeOfLabel": "{$PH} - {$PH_1} van {$PH_2}",
+    "paginator.zeroRange": "0 van {$PH}"
   }
 }

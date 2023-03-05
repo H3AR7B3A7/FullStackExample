@@ -5,9 +5,10 @@ import { CoreModule } from './core/core.module'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { HeaderComponent } from '@app/header/header.component'
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent],
   imports: [
     CoreModule,
     AppRoutingModule,

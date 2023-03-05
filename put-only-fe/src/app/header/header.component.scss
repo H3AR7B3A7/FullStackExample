@@ -3,6 +3,10 @@
 @import "src/assets/style/dark-theme";
 @import "src/assets/style/contrast-theme";
 
+.title {
+  cursor: pointer;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
