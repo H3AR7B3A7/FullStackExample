@@ -4,9 +4,10 @@ import { AppComponent } from './app.component'
 import { CoreModule } from './core/core.module'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { HeaderComponent } from '@app/header/header.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     CoreModule,
     AppRoutingModule,
