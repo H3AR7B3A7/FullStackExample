@@ -1,12 +1,21 @@
 @use "@angular/material" as mat;
 
 /**
+ * Theme defaults
+ */
+@mixin theme-defaults() {
+  height: 100%;
+}
+
+/**
  * Mixin to help set the defaults for a custom theme
  */
 @mixin custom-theme($theme) {
   // Defaults
+  @include theme-defaults();
+
+  // Custom Colors
   @include mat.all-component-colors($theme);
-  height: 100%;
 
   // Custom Variables
   $color-palettes: map-get($theme, color);

@@ -24,7 +24,7 @@ body {
 }
 
 .light-theme {
-  @include custom-theme($light-theme);
+  @include theme-defaults();
 }
 
 .dark-theme {
