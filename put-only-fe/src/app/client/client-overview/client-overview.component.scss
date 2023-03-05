@@ -1,12 +1,13 @@
+@import "src/assets/style/variables";
+@import "src/assets/style/mixins";
+
 .wrapper {
-  margin: 16px;
-  padding: 8px;
-  border-radius: 5px;
+  margin: $medium-spacing;
+  padding: $small-spacing;
+  border-radius: $border-radius;
 
   &.error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 64px;
+    @include center();
+    min-height: $huge-spacing;
   }
 }

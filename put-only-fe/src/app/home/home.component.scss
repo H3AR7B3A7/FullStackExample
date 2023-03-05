@@ -1,8 +1,8 @@
+@import "src/assets/style/mixins";
+
 .container {
-  display: flex;
+  @include center();
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
 
   mat-icon {

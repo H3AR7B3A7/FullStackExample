@@ -1,7 +1,9 @@
+@import "src/assets/style/variables";
+
 mat-sidenav {
-  width: 250px;
+  width: $sidenav-width;
 }
 
 mat-sidenav-container {
-  height: calc(100% - 64px);
+  height: calc(100% - $header-height);
 }
