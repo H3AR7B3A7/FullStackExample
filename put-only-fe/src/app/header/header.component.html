@@ -8,8 +8,9 @@
     <mat-label i18n>Theme</mat-label>
     <mat-select
       class="theme-select"
-      [formControl]="currentTheme"
-      [panelClass]="currentTheme.value!"
+      [value]="(currentTheme$ | async)!"
+      [panelClass]="(currentTheme$ | async)!"
+      (selectionChange)="onChange($event)"
     >
       <mat-option *ngFor="let theme of themes" [value]="theme.value">
         {{ theme.title }}

@@ -23,7 +23,10 @@ export class ClientService {
     } else {
       errorMessage = `Backend returned code ${err.status}: ${err.statusText}`
     }
-    console.log('%c' + errorMessage, 'font-family: sans-serif; font-weight: bold; font-size: 18px; color: red')
+    console.log(
+      '%c' + errorMessage,
+      'font-family: sans-serif; font-weight: bold; font-size: 18px; color: red'
+    )
     return throwError(() => errorMessage)
   }
 }
