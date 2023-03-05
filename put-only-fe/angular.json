@@ -4,6 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "put-only-fe": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "de": "src/assets/i18n/messages.de.json",
+          "es": "src/assets/i18n/messages.es.json",
+          "fr": "src/assets/i18n/messages.fr.json",
+          "nl": "src/assets/i18n/messages.nl.json"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +26,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["de", "es", "fr", "nl"],
             "outputPath": "dist/put-only-fe",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -57,6 +67,21 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "de": {
+              "localize": ["de"]
+            },
+            "es": {
+              "localize": ["es"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "nl": {
+              "localize": ["nl"]
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +94,21 @@
             },
             "development": {
               "browserTarget": "put-only-fe:build:development"
+            },
+            "en": {
+              "browserTarget": "put-only-fe:build:development,en"
+            },
+            "de": {
+              "browserTarget": "put-only-fe:build:development,de"
+            },
+            "es": {
+              "browserTarget": "put-only-fe:build:development,es"
+            },
+            "fr": {
+              "browserTarget": "put-only-fe:build:development,fr"
+            },
+            "nl": {
+              "browserTarget": "put-only-fe:build:development,nl"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,18 @@
+{
+  "locale": "es",
+  "translations": {
+    "5910845130937645353": "Clients",
+    "5273501066845923426": "Client ID",
+    "3849708118318844348": "Asegurado",
+    "paginator.zeroRange": "0 de {$PH}",
+    "paginator.rangeOfLabel": "{$PH} - {$PH_1} de {$PH_2}",
+    "paginator.displayPerPage": "Artículos por página",
+    "paginator.nextPage": "Siguiente página",
+    "paginator.prevPage": "Pagina anterior",
+    "2236258982969072392": "Aplicación de ejemplo",
+    "7103588127254721505": "Tema",
+    "1648472582356305138": "Tema de luz",
+    "5824507108095419704": "Tema oscuro",
+    "1810130218338094013": "Tema de contraste"
+  }
+}

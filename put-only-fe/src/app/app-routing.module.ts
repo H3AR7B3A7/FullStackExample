@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    title: 'Clients',
+    title: $localize`Clients`,
     path: 'client',
     loadChildren: () =>
       import('./client/client.module').then((m) => m.ClientModule),

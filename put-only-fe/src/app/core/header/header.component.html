@@ -2,17 +2,17 @@
   <button mat-icon-button (click)="toggleSidenav()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span i18n>Example Application</span>
   <span class="spacer"></span>
   <mat-form-field appearance="fill">
-    <mat-label>Theme</mat-label>
+    <mat-label i18n>Theme</mat-label>
     <mat-select
       class="theme-select"
       [formControl]="currentTheme"
       [panelClass]="currentTheme.value!"
     >
-      <mat-option *ngFor="let theme of themes" [value]="theme">
-        {{ theme }}
+      <mat-option *ngFor="let theme of themes" [value]="theme.value">
+        {{ theme.title }}
       </mat-option>
     </mat-select>
   </mat-form-field>

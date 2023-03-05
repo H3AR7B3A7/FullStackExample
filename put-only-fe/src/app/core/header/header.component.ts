@@ -12,7 +12,7 @@ import { filter, tap } from 'rxjs'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  readonly themes: Theme[] = THEMES
+  readonly themes = THEMES
   currentTheme = new FormControl<Theme>('light-theme')
 
   constructor(private store: Store) {}
