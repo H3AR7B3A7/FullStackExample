@@ -1,12 +1,25 @@
-import { Component } from '@angular/core'
-import { ClientService } from './client.service'
+import { Component, OnInit } from '@angular/core'
+import { Store } from '@ngrx/store'
+import { Observable } from 'rxjs'
+import { Client } from '@app/client/client'
+import {
+  selectClients,
+  selectClientErrorMessage,
+} from '@app/client/state/client.selector'
+import { loadClients } from '@app/client/state/actions/client-page.actions'
 
 @Component({
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.scss'],
 })
-export class ClientComponent {
-  constructor(private clientService: ClientService) {}
+export class ClientComponent implements OnInit {
+  clients$!: Observable<Client[]>
+  errorMessage$!: Observable<string>
+  constructor(private store: Store) {}
 
-  clients$ = this.clientService.getClients()
+  ngOnInit() {
+    this.clients$ = this.store.select(selectClients)
+    this.errorMessage$ = this.store.select(selectClientErrorMessage)
+    this.store.dispatch(loadClients())
+  }
 }

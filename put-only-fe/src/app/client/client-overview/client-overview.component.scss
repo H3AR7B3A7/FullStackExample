@@ -2,4 +2,11 @@
   margin: 16px;
   padding: 8px;
   border-radius: 5px;
+
+  &.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+  }
 }

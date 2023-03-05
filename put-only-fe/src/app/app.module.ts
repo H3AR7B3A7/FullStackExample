@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { HeaderComponent } from '@app/header/header.component'
 import { HomeComponent } from './home/home.component'
+import { EffectsModule } from '@ngrx/effects'
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent],
@@ -13,7 +14,12 @@ import { HomeComponent } from './home/home.component'
     CoreModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({
+      name: 'Example App DevTools',
+      maxAge: 25,
+      logOnly: !isDevMode(),
+    }),
+    EffectsModule.forRoot([]),
   ],
   bootstrap: [AppComponent],
 })

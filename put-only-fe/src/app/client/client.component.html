@@ -1,1 +1,4 @@
-<app-client-overview [clients$]="clients$"></app-client-overview>
+<app-client-overview
+  [clients$]="clients$"
+  [errorMessage]="(errorMessage$ | async)!"
+></app-client-overview>

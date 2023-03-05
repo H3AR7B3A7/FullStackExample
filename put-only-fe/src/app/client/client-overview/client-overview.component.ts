@@ -20,6 +20,8 @@ import { MatSort } from '@angular/material/sort'
 export class ClientOverviewComponent implements OnInit {
   @Input()
   clients$!: Observable<Client[]>
+  @Input()
+  errorMessage = ''
   @ViewChild(MatPaginator) paginator!: MatPaginator
   @ViewChild(MatSort) sort!: MatSort
   private readonly dataSource = new MatTableDataSource<Client>()

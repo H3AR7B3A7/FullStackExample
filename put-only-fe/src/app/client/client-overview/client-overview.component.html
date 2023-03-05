@@ -1,4 +1,8 @@
-<div class="wrapper mat-elevation-z8">
+<div *ngIf="errorMessage" class="wrapper mat-elevation-z8 error">
+  <span>{{ errorMessage }}</span>
+</div>
+
+<div *ngIf="!errorMessage" class="wrapper mat-elevation-z8">
   <table mat-table [dataSource]="(dataSource$ | async)!" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="clientId">

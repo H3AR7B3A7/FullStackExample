@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.theme$ = this.store.select(selectTheme)
     this.sidenav$ = this.store.select(selectSidenav)
-    console.log(this.router.config)
     this.routes = this.router.config.filter((route) => !!route.title)
   }
 
