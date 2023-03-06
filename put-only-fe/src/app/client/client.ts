@@ -1,4 +1,4 @@
 export interface Client {
-  clientId: string;
+  clientId: number;
   secured: boolean;
 }

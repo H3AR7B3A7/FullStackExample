@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest --no-cache",
     "lint": "ng lint --fix",
-    "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write",
+    "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write && ng lint --fix",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",

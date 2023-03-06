@@ -9,6 +9,7 @@ import { StoreModule } from '@ngrx/store'
 import { clientReducer } from '@app/client/state/client.reducer'
 import { EffectsModule } from '@ngrx/effects'
 import { ClientEffects } from '@app/client/state/client.effects'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [ClientComponent, ClientOverviewComponent],
@@ -17,6 +18,7 @@ import { ClientEffects } from '@app/client/state/client.effects'
     ClientRoutingModule,
     StoreModule.forFeature('client', clientReducer),
     EffectsModule.forFeature([ClientEffects]),
+    MatProgressSpinnerModule,
   ],
   providers: [{ provide: MatPaginatorIntl, useValue: MyPaginatorIntl() }],
 })

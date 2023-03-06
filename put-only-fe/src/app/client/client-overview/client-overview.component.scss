@@ -11,3 +11,8 @@
     min-height: $huge-spacing;
   }
 }
+
+.spinner {
+  @include center();
+  height: 100%;
+}

@@ -7,14 +7,8 @@ import { appReducer } from '@app/core/state/core.reducer'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
-  imports: [
-    StoreModule.forFeature('core', appReducer),
-  ],
-  exports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-  ],
+  imports: [StoreModule.forFeature('core', appReducer)],
+  exports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
