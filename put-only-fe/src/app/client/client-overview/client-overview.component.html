@@ -11,7 +11,13 @@
 </div>
 
 <div [hidden]="loading" *ngIf="!errorMessage" class="wrapper mat-elevation-z8">
-  <table mat-table [dataSource]="(dataSource$ | async)!" matSort>
+  <table
+    mat-table
+    matSort
+    matSortActive="clientId"
+    matSortDirection="asc"
+    [dataSource]="(dataSource$ | async)!"
+  >
     <!-- Position Column -->
     <ng-container matColumnDef="clientId">
       <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Client ID</th>
