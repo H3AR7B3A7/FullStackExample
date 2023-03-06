@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
-import { catchError, Observable, throwError } from 'rxjs'
+import { catchError, delay, Observable, throwError } from 'rxjs'
 import { Client } from './client'
 
 @Injectable({
@@ -13,7 +13,10 @@ export class ClientService {
   getClients(): Observable<Client[]> {
     return this.http
       .get<Client[]>(this.baseUrl)
-      .pipe(catchError((err) => this.handleError(err)))
+      .pipe(
+        delay(2000),
+        catchError((err) => this.handleError(err))
+      )
   }
 
   private handleError(err: HttpErrorResponse) {

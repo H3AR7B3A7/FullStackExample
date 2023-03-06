@@ -27,6 +27,8 @@ export class ClientOverviewComponent implements OnInit {
   private readonly dataSource = new MatTableDataSource<Client>()
   dataSource$!: Observable<MatTableDataSource<Client>>
   displayedColumns = ['clientId', 'secured']
+  private readonly skeleton: Client = {clientId:'',secured: '' } as unknown as Client
+  readonly skeletonData = new Array(5).fill(this.skeleton)
 
   ngOnInit(): void {
     this.dataSource$ = this.clients$.pipe(
