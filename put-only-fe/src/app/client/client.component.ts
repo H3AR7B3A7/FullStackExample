@@ -4,6 +4,7 @@ import { Observable } from 'rxjs'
 import { Client } from '@app/client/client'
 import {
   selectClientErrorMessage,
+  selectClientLoading,
   selectClients,
 } from '@app/client/state/client.selector'
 import { loadClients } from '@app/client/state/actions/client-page.actions'
@@ -16,11 +17,14 @@ import { loadClients } from '@app/client/state/actions/client-page.actions'
 export class ClientComponent implements OnInit {
   clients$!: Observable<Client[]>
   errorMessage$!: Observable<string>
+  loading$!: Observable<boolean>
+
   constructor(private store: Store) {}
 
   ngOnInit() {
     this.clients$ = this.store.select(selectClients)
     this.errorMessage$ = this.store.select(selectClientErrorMessage)
+    this.loading$ = this.store.select(selectClientLoading)
     this.store.dispatch(loadClients())
   }
 }

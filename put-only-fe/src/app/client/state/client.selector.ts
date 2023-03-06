@@ -11,3 +11,8 @@ export const selectClientErrorMessage = createSelector(
   selectClientFeatureState,
   (state) => state.errorMessage
 )
+
+export const selectClientLoading = createSelector(
+  selectClientFeatureState,
+  (state) => state.loading
+)

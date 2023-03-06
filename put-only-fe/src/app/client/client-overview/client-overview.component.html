@@ -1,8 +1,16 @@
-<div *ngIf="errorMessage" class="wrapper mat-elevation-z8 error">
+<div *ngIf="loading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div
+  [hidden]="loading"
+  *ngIf="errorMessage"
+  class="wrapper mat-elevation-z8 error"
+>
   <span>{{ errorMessage }}</span>
 </div>
 
-<div *ngIf="!errorMessage" class="wrapper mat-elevation-z8">
+<div [hidden]="loading" *ngIf="!errorMessage" class="wrapper mat-elevation-z8">
   <table mat-table [dataSource]="(dataSource$ | async)!" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="clientId">

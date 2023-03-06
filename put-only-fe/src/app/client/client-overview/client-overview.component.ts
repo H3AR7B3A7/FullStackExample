@@ -22,6 +22,9 @@ export class ClientOverviewComponent implements OnInit {
   clients$!: Observable<Client[]>
   @Input()
   errorMessage = ''
+  @Input()
+  loading!: boolean
+
   @ViewChild(MatPaginator) paginator!: MatPaginator
   @ViewChild(MatSort) sort!: MatSort
   private readonly dataSource = new MatTableDataSource<Client>()

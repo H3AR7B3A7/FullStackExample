@@ -6,6 +6,7 @@ import { ClientApiActions } from '@app/client/state/actions'
 const initialState: ClientState = {
   clients: [],
   errorMessage: '',
+  loading: true,
 }
 
 export const clientReducer = createReducer<ClientState>(
@@ -15,6 +16,7 @@ export const clientReducer = createReducer<ClientState>(
       ...state,
       clients: action.clients,
       errorMessage: '',
+      loading: false,
     }
   }),
   on(ClientApiActions.loadClientsFail, (state, action): ClientState => {
@@ -22,6 +24,7 @@ export const clientReducer = createReducer<ClientState>(
       ...state,
       clients: [],
       errorMessage: action.error,
+      loading: false,
     }
   })
 )
