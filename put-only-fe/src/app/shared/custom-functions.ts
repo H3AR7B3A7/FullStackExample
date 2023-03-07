@@ -1,12 +1,17 @@
+import { _isNumberValue } from '@angular/cdk/coercion'
+
 export class CustomFunctions {
-  static caseInsensitiveSortingDataAccessor = <T>(
-    data: T,
+  static caseInsensitiveSortingDataAccessor = (
+    // eslint-disable-next-line
+    data: any,
     sortHeaderId: string
-  ): keyof T => {
-    return typeof data[sortHeaderId as keyof T] === 'string'
-      ? ((
-          data[sortHeaderId as keyof T] as string
-        ).toLocaleLowerCase() as keyof T)
-      : (data[sortHeaderId as keyof T] as keyof T)
+  ): string | number => {
+    if (_isNumberValue(data[sortHeaderId])) {
+      return +data[sortHeaderId]
+    }
+    if (typeof data[sortHeaderId] === 'string') {
+      return data[sortHeaderId].toLocaleLowerCase()
+    }
+    return data[sortHeaderId]
   }
 }
