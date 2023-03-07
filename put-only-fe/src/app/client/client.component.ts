@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { Store } from '@ngrx/store'
-import { Observable } from 'rxjs'
 import { Client } from '@app/client/client'
+import { loadClients } from '@app/client/state/actions/client-page.actions'
 import {
   selectClientErrorMessage,
   selectClientLoading,
   selectClients,
 } from '@app/client/state/client.selector'
-import { loadClients } from '@app/client/state/actions/client-page.actions'
+import { Store } from '@ngrx/store'
+import { Observable } from 'rxjs'
 
 @Component({
   templateUrl: './client.component.html',

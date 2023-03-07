@@ -1,5 +1,5 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store'
 import { CoreState } from '@app/core/state/core.state'
+import { createFeatureSelector, createSelector } from '@ngrx/store'
 
 export const selectAppState = createFeatureSelector<CoreState>('core')
 

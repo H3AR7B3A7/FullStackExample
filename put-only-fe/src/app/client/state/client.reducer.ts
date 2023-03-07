@@ -1,7 +1,6 @@
-import { createReducer, on } from '@ngrx/store'
-
-import { ClientState } from '@app/client/state/client.state'
 import { ClientApiActions } from '@app/client/state/actions'
+import { ClientState } from '@app/client/state/client.state'
+import { createReducer, on } from '@ngrx/store'
 
 const initialState: ClientState = {
   clients: [],

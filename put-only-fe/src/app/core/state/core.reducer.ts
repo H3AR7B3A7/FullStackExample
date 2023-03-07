@@ -1,7 +1,7 @@
+import { CoreState } from '@app/core/state/core.state'
 import { createReducer, on } from '@ngrx/store'
 
 import * as CoreActions from './core.actions'
-import { CoreState } from '@app/core/state/core.state'
 
 const initialState: CoreState = {
   currentTheme: 'light-theme',

@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { Store } from '@ngrx/store'
-import { Observable } from 'rxjs'
-
+import { Route, Router } from '@angular/router'
 import * as CoreActions from '@app/core/state/core.actions'
 import { selectSidenav, selectTheme } from '@app/core/state/core.selector'
-import { Route, Router } from '@angular/router'
+import { Store } from '@ngrx/store'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-root',
