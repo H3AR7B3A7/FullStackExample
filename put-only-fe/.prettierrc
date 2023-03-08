@@ -4,5 +4,6 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "singleQuote": true,
-  "semi": false
+  "semi": false,
+  "tabWidth": 2
 }

@@ -1,13 +1,17 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 import { Client } from '@app/client/client'
-import {loadClients, showForm} from '@app/client/state/actions/client-page.actions'
+import {
+  loadClients,
+  showForm,
+} from '@app/client/state/actions/client-page.actions'
 import {
   selectClientErrorMessage,
   selectClientLoading,
-  selectClients, selectClientShowForm,
+  selectClientShowForm,
+  selectClients,
 } from '@app/client/state/client.selector'
 import { Store } from '@ngrx/store'
-import {combineLatest, map, Observable} from 'rxjs'
+import { Observable, combineLatest, map } from 'rxjs'
 
 @Component({
   templateUrl: './client.component.html',
@@ -37,6 +41,6 @@ export class ClientComponent implements OnInit {
   }
 
   addClicked() {
-    this.store.dispatch(showForm({value: true}))
+    this.store.dispatch(showForm({ value: true }))
   }
 }

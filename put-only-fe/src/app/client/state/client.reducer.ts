@@ -30,7 +30,7 @@ export const clientReducer = createReducer<ClientState>(
   on(ClientPageActions.showForm, (state, action): ClientState => {
     return {
       ...state,
-      showForm: action.value
+      showForm: action.value,
     }
   })
 )
