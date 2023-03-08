@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
 import { MatPaginatorIntl } from '@angular/material/paginator'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MyPaginatorIntl } from '@app/client/mat-paginator-intl'
@@ -23,6 +24,7 @@ import { ClientComponent } from './client.component'
     EffectsModule.forFeature([ClientEffects]),
     MatProgressSpinnerModule,
     MatButtonModule,
+    MatIconModule,
   ],
   providers: [{ provide: MatPaginatorIntl, useValue: MyPaginatorIntl() }],
 })
