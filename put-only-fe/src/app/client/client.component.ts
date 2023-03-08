@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 import { Client } from '@app/client/client'
-import { loadClients } from '@app/client/state/actions/client-page.actions'
+import {loadClients, showForm} from '@app/client/state/actions/client-page.actions'
 import {
   selectClientErrorMessage,
   selectClientLoading,
-  selectClients,
+  selectClients, selectClientShowForm,
 } from '@app/client/state/client.selector'
 import { Store } from '@ngrx/store'
 import { Observable } from 'rxjs'
@@ -18,6 +18,7 @@ export class ClientComponent implements OnInit {
   clients$!: Observable<Client[]>
   errorMessage$!: Observable<string>
   loading$!: Observable<boolean>
+  showForm$!: Observable<boolean>
 
   constructor(private store: Store) {}
 
@@ -25,6 +26,11 @@ export class ClientComponent implements OnInit {
     this.clients$ = this.store.select(selectClients)
     this.errorMessage$ = this.store.select(selectClientErrorMessage)
     this.loading$ = this.store.select(selectClientLoading)
+    this.showForm$ = this.store.select(selectClientShowForm)
     this.store.dispatch(loadClients())
+  }
+
+  addClicked() {
+    this.store.dispatch(showForm({value: true}))
   }
 }

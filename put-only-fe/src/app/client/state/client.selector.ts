@@ -16,3 +16,8 @@ export const selectClientLoading = createSelector(
   selectClientFeatureState,
   (state) => state.loading
 )
+
+export const selectClientShowForm = createSelector(
+  selectClientFeatureState,
+  (state) => state.showForm
+)
