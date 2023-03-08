@@ -22,8 +22,7 @@
         "plugin:@ngrx/strict-requiring-type-checking"
       ],
       "plugins": [
-        "deprecation",
-        "unused-imports"
+        "deprecation"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -51,11 +50,7 @@
           "error",
           "single"
         ],
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "warn",
-          { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-        ]
+        "no-unused-vars": ["error", { "args": "none" }]
       }
     },
     {
