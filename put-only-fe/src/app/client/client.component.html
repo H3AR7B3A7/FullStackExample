@@ -1,4 +1,4 @@
-<div class="buttons">
+<div class="buttons" *ngIf="showButtons$ | async">
   <button mat-raised-button color="accent" (click)="addClicked()">Add</button>
 </div>
 <div class="view">

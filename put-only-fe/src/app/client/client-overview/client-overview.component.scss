@@ -3,7 +3,7 @@
 
 .wrapper {
   border-radius: $border-radius;
-  flex: 1;
+  padding: $small-spacing;
 
   &.error {
     @include center();
