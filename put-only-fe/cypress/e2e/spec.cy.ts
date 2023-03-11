@@ -43,6 +43,7 @@ describe('Given the user changes theme', () => {
       cy.visit('/')
       cy.contains('Light Theme').click()
       cy.contains('Dark Theme').click()
+      cy.get('.mat-app-background').should('have.class', 'dark-theme')
       cy.get('.mat-toolbar').should('have.css', 'color', $white)
       cy.get('.mat-toolbar').should(
         'have.css',
@@ -57,6 +58,7 @@ describe('Given the user changes theme', () => {
       cy.visit('/')
       cy.contains('Light Theme').click()
       cy.contains('Contrast Theme').click()
+      cy.get('.mat-app-background').should('have.class', 'contrast-theme')
       cy.get('.mat-toolbar').should('have.css', 'color', $black)
       cy.get('.mat-toolbar').should(
         'have.css',
@@ -73,6 +75,7 @@ describe('Given the user changes theme', () => {
       cy.contains('Contrast Theme').click()
       cy.contains('Contrast Theme').click()
       cy.contains('Light Theme').click()
+      cy.get('.mat-app-background').should('have.class', 'light-theme')
       cy.get('.mat-toolbar').should('have.css', 'color', $white)
       cy.get('.mat-toolbar').should(
         'have.css',
