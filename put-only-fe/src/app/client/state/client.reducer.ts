@@ -1,12 +1,12 @@
-import { createReducer, on } from '@ngrx/store'
-
+import { ClientApiActions, ClientPageActions } from '@app/client/state/actions'
 import { ClientState } from '@app/client/state/client.state'
-import { ClientApiActions } from '@app/client/state/actions'
+import { createReducer, on } from '@ngrx/store'
 
 const initialState: ClientState = {
   clients: [],
   errorMessage: '',
   loading: true,
+  showForm: false,
 }
 
 export const clientReducer = createReducer<ClientState>(
@@ -25,6 +25,12 @@ export const clientReducer = createReducer<ClientState>(
       clients: [],
       errorMessage: action.error,
       loading: false,
+    }
+  }),
+  on(ClientPageActions.showForm, (state, action): ClientState => {
+    return {
+      ...state,
+      showForm: action.value,
     }
   })
 )

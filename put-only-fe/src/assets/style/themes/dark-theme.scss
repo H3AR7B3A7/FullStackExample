@@ -1,5 +1,5 @@
-@use "@angular/material" as mat;
-@import "./dark-palette";
+@use '@angular/material' as mat;
+@import './dark-palette';
 
 $dark-theme: mat.define-dark-theme(
   (

@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { Store } from '@ngrx/store'
-import * as CoreActions from '@app/core/state/core.actions'
-import { Theme, THEMES } from '@app/core/theme'
-import { selectTheme } from '@app/core/state/core.selector'
-import { Observable } from 'rxjs'
 import { MatSelectChange } from '@angular/material/select'
+import * as CoreActions from '@app/core/state/core.actions'
+import { selectTheme } from '@app/core/state/core.selector'
+import { THEMES, Theme } from '@app/core/theme'
+import { Store } from '@ngrx/store'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-header',

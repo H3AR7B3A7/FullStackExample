@@ -1,5 +1,5 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store'
 import { ClientState } from '@app/client/state/client.state'
+import { createFeatureSelector, createSelector } from '@ngrx/store'
 
 const selectClientFeatureState = createFeatureSelector<ClientState>('client')
 export const selectClients = createSelector(
@@ -15,4 +15,9 @@ export const selectClientErrorMessage = createSelector(
 export const selectClientLoading = createSelector(
   selectClientFeatureState,
   (state) => state.loading
+)
+
+export const selectClientShowForm = createSelector(
+  selectClientFeatureState,
+  (state) => state.showForm
 )

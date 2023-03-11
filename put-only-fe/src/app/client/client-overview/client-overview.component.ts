@@ -5,12 +5,13 @@ import {
   Input,
   ViewChild,
 } from '@angular/core'
-import { Client } from '../client'
-import { MatTableDataSource } from '@angular/material/table'
-import { map, Observable } from 'rxjs'
 import { MatPaginator } from '@angular/material/paginator'
 import { MatSort } from '@angular/material/sort'
+import { MatTableDataSource } from '@angular/material/table'
 import { CustomFunctions } from '@app/shared/custom-functions'
+import { Observable, map } from 'rxjs'
+
+import { Client } from '../client'
 
 @Component({
   selector: 'app-client-overview',

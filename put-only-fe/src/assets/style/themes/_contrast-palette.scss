@@ -1,4 +1,5 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
+@import './colors';
 
 $primary: (
   50: #fffaed,
@@ -16,20 +17,20 @@ $primary: (
   A400: #fff5e1,
   A700: #ffedc8,
   contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #000000,
-    900: #000000,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
+    50: $black,
+    100: $black,
+    200: $black,
+    300: $black,
+    400: $black,
+    500: $black,
+    600: $black,
+    700: $black,
+    800: $black,
+    900: $black,
+    A100: $black,
+    A200: $black,
+    A400: $black,
+    A700: $black,
   ),
 );
 

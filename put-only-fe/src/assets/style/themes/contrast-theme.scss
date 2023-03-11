@@ -1,7 +1,7 @@
-@use "@angular/material" as mat;
-@import "./contrast-palette";
-@import "./functions";
-@import "./colors";
+@use '@angular/material' as mat;
+@import './contrast-palette';
+@import './functions';
+@import './colors';
 
 $contrast-theme: mat.define-dark-theme(
   (

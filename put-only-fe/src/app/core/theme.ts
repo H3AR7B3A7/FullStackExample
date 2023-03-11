@@ -1,4 +1,4 @@
-export type Theme = 'light-theme' | 'dark-theme' | 'contrast-theme';
+export type Theme = 'light-theme' | 'dark-theme' | 'contrast-theme'
 
 export const THEMES: { title: string; value: Theme }[] = [
   { title: $localize`Light Theme`, value: 'light-theme' },

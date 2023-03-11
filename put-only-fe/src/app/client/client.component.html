@@ -1,5 +1,14 @@
-<app-client-overview
-  [clients$]="clients$"
-  [errorMessage]="(errorMessage$ | async)!"
-  [loading]="(loading$ | async)!"
-></app-client-overview>
+<div class="buttons" *ngIf="showButtons$ | async">
+  <button mat-raised-button color="accent" (click)="addClicked()">
+    <mat-icon>library_add</mat-icon>
+    Add Client
+  </button>
+</div>
+<div class="view">
+  <app-client-overview
+    [clients$]="clients$"
+    [errorMessage]="(errorMessage$ | async)!"
+    [loading]="(loading$ | async)!"
+  ></app-client-overview>
+  <app-client-form *ngIf="showForm$ | async"></app-client-form>
+</div>

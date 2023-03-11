@@ -1,0 +1,11 @@
+@import 'src/assets/style/variables';
+
+.wrapper {
+  padding: $small-spacing;
+  border-radius: $border-radius;
+  flex: 1;
+
+  button {
+    margin: $small-spacing;
+  }
+}

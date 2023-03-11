@@ -1,0 +1,30 @@
+@import 'src/assets/style/variables';
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & .buttons {
+    margin: $medium-spacing $medium-spacing 0 $medium-spacing;
+    padding:  $small-spacing $small-spacing 0 $small-spacing;
+  }
+
+  & .view {
+    display: flex;
+    flex: 1;
+    margin: $medium-spacing;
+    padding: $small-spacing;
+
+    & app-client-overview {
+      flex: 1;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    & app-client-form {
+      margin-left: $medium-spacing;
+      width: 30%;
+    }
+  }
+}
