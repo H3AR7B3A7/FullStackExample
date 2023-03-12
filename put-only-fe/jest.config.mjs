@@ -1,4 +1,4 @@
-import compilerOptions from './tsconfig.json' assert { type : 'json' }
+import tsconfig from './tsconfig.json' assert { type : 'json' }
 import { pathsToModuleNameMapper } from 'ts-jest'
 
 export default {
@@ -6,7 +6,7 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   globalSetup: 'jest-preset-angular/global-setup.mjs',
   moduleNameMapper: {
-    ...pathsToModuleNameMapper(compilerOptions.compilerOptions.paths, {
+    ...pathsToModuleNameMapper(tsconfig.compilerOptions.paths, {
       prefix: '<rootDir>/',
     }),
     prefix: '<rootDir>/',
