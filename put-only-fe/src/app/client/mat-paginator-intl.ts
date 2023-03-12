@@ -1,6 +1,10 @@
 import { MatPaginatorIntl } from '@angular/material/paginator'
 
-const matRangeLabelIntl = (page: number, pageSize: number, length: number) => {
+const matRangeLabelIntl = (
+  page: number,
+  pageSize: number,
+  length: number
+): string => {
   if (length === 0 || pageSize === 0) {
     return $localize`:@@paginator.zeroRange:0 in ${length}`
   }
@@ -17,7 +21,7 @@ const matRangeLabelIntl = (page: number, pageSize: number, length: number) => {
   } - ${endIndex} in ${length}`
 }
 
-export function MyPaginatorIntl() {
+export function MyPaginatorIntl(): MatPaginatorIntl {
   const paginatorIntl = new MatPaginatorIntl()
 
   paginatorIntl.itemsPerPageLabel = $localize`:@@paginator.displayPerPage:Items per page`

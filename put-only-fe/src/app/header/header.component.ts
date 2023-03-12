@@ -18,15 +18,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(private store: Store) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.currentTheme$ = this.store.select(selectTheme)
   }
 
-  toggleSidenav() {
+  toggleSidenav(): void {
     this.store.dispatch(CoreActions.toggleSidenav())
   }
 
-  onChange(selection: MatSelectChange) {
+  onChange(selection: MatSelectChange): void {
     this.store.dispatch(CoreActions.changeTheme({ theme: selection.value }))
   }
 }

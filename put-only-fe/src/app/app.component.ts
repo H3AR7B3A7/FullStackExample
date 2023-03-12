@@ -19,13 +19,13 @@ export class AppComponent implements OnInit {
 
   constructor(private store: Store, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.theme$ = this.store.select(selectTheme)
     this.sidenav$ = this.store.select(selectSidenav)
     this.routes = this.router.config.filter((route) => !!route.title)
   }
 
-  openChanged(showSidenav: boolean) {
+  openChanged(showSidenav: boolean): void {
     this.store.dispatch(CoreActions.openSidenav({ open: showSidenav }))
   }
 }

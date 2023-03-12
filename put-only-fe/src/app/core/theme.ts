@@ -14,7 +14,7 @@ export type Theme = (typeof themes)[keyof typeof themes]
  * Resolve by const value
  * @param theme
  */
-export const resolveTheme = <T extends Theme>(theme: T) => {
+export const resolveTheme = <T extends Theme>(theme: T): string | undefined => {
   return Object.keys(themes).find(
     (key) => themes[key as keyof typeof themes] === theme
   )

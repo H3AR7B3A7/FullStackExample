@@ -34,7 +34,7 @@ export class ClientOverviewComponent implements AfterViewInit {
   displayedColumns = ['clientId', 'secured']
   private readonly dataSource = new MatTableDataSource<Client>()
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource$ = this.clients$.pipe(
       map((clients) => {
         this.dataSource.sortingDataAccessor =

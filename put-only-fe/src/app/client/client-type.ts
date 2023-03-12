@@ -27,7 +27,9 @@ export type ClientType = (typeof clientTypes)[keyof typeof clientTypes]
  * Resolve by const value
  * @param clientType
  */
-export const resolveClientType = <T extends ClientType>(clientType: T) => {
+export const resolveClientType = <T extends ClientType>(
+  clientType: T
+): string | undefined => {
   return Object.keys(clientTypes).find(
     (key) => clientTypes[key as keyof typeof clientTypes] === clientType
   )

@@ -18,7 +18,7 @@ export class ClientService {
     )
   }
 
-  private handleError(err: HttpErrorResponse) {
+  private handleError(err: HttpErrorResponse): Observable<never> {
     let errorMessage: string
     if (err.error instanceof ErrorEvent) {
       errorMessage = `An error occurred: ${err.error.message}`

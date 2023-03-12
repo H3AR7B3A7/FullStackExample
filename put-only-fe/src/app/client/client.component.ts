@@ -27,7 +27,7 @@ export class ClientComponent implements OnInit {
 
   constructor(private store: Store) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.clients$ = this.store.select(selectClients)
     this.errorMessage$ = this.store.select(selectClientErrorMessage)
     this.loading$ = this.store.select(selectClientLoading)
@@ -40,7 +40,7 @@ export class ClientComponent implements OnInit {
     this.store.dispatch(loadClients())
   }
 
-  addClicked() {
+  addClicked(): void {
     this.store.dispatch(showForm({ value: true }))
   }
 }

@@ -14,11 +14,11 @@ export class ClientFormComponent {
 
   constructor(private store: Store) {}
 
-  submit() {
+  submit(): void {
     this.store.dispatch(showForm({ value: false }))
   }
 
-  cancel() {
+  cancel(): void {
     this.store.dispatch(showForm({ value: false }))
   }
 }
