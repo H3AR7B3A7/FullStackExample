@@ -1,10 +1,11 @@
 import { CoreState } from '@app/core/state/core.state'
+import { DEFAULT_THEME } from '@app/core/theme'
 import { createReducer, on } from '@ngrx/store'
 
 import * as CoreActions from './core.actions'
 
 const initialState: CoreState = {
-  currentTheme: 'light-theme',
+  currentTheme: DEFAULT_THEME,
   showSidenav: true,
 }
 

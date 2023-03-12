@@ -9,10 +9,10 @@
     <mat-select
       class="theme-select"
       [value]="(currentTheme$ | async)!"
-      [panelClass]="(currentTheme$ | async)!"
+      [panelClass]="(currentTheme$ | async)!.value"
       (selectionChange)="onChange($event)"
     >
-      <mat-option *ngFor="let theme of themes" [value]="theme.value">
+      <mat-option *ngFor="let theme of themes" [value]="theme">
         {{ theme.title }}
       </mat-option>
     </mat-select>

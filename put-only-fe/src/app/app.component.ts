@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 import { Route, Router } from '@angular/router'
 import * as CoreActions from '@app/core/state/core.actions'
 import { selectSidenav, selectTheme } from '@app/core/state/core.selector'
+import { Theme } from '@app/core/theme'
 import { Store } from '@ngrx/store'
 import { Observable } from 'rxjs'
 
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
-  theme$!: Observable<string>
+  theme$!: Observable<Theme>
   sidenav$!: Observable<boolean>
   routes: Route[] = []
 
