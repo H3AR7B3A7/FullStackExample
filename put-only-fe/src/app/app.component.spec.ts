@@ -55,13 +55,13 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  // it('should have a default theme of light', () => {
-  //   expect(component.theme$).toBeDefined()
-  //   component.theme$.subscribe((theme) => {
-  //     console.log('theme', theme)
-  //     expect(theme).toEqual('lol') // ?????
-  //   })
-  // })
+  it('should have a default theme of light', () => {
+    expect(component.theme$).toBeDefined()
+    component.theme$.subscribe((theme) => {
+      console.log('theme', theme)
+      expect(theme).toEqual('lol') // ?????
+    })
+  })
 
   it('should have the side navigation panel open by default', () => {
     expect(component.sidenav$).toBeDefined()
