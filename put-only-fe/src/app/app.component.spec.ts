@@ -10,12 +10,12 @@ import { RouterModule } from '@angular/router'
 import { routes } from '@app/app-routing.module'
 import { AppComponent } from '@app/app.component'
 import { appReducer, initialState } from '@app/core/state/core.reducer'
+import { DEFAULT_THEME } from '@app/core/theme'
 import { HeaderComponent } from '@app/header/header.component'
 import { describe, expect, test } from '@jest/globals'
 import { StoreModule } from '@ngrx/store'
 import { provideMockStore } from '@ngrx/store/testing'
-import { first, firstValueFrom } from 'rxjs'
-import { DEFAULT_THEME } from "@app/core/theme";
+import { firstValueFrom } from 'rxjs'
 
 describe('AppComponent', () => {
   let component: AppComponent
