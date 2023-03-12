@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { CLIENT_TYPES } from '@app/client/client-type'
 import { showForm } from '@app/client/state/actions/client-page.actions'
 import { Store } from '@ngrx/store'
 
@@ -9,6 +10,8 @@ import { Store } from '@ngrx/store'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ClientFormComponent {
+  clientTypes = CLIENT_TYPES
+
   constructor(private store: Store) {}
 
   submit() {

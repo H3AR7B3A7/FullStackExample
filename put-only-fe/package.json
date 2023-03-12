@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration=en",
+    "start": "ng serve -o --configuration=en",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest --no-cache",
@@ -13,10 +13,10 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "i18n": "ng extract-i18n --format=json --output-path src/assets/i18n",
-    "start:de": "ng serve --configuration=de",
-    "start:es": "ng serve --configuration=es",
-    "start:fr": "ng serve --configuration=fr",
-    "start:nl": "ng serve --configuration=nl"
+    "start:de": "ng serve -o --configuration=de",
+    "start:es": "ng serve -o --configuration=es",
+    "start:fr": "ng serve -o --configuration=fr",
+    "start:nl": "ng serve -o --configuration=nl"
   },
   "private": true,
   "dependencies": {

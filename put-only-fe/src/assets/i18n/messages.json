@@ -1,20 +1,23 @@
 {
   "locale": "en",
   "translations": {
-    "133478753074369062": "An example material design application",
-    "1648472582356305138": "Light Theme",
-    "1810130218338094013": "Contrast Theme",
-    "2236258982969072392": "Example Application",
     "2821179408673282599": "Home",
-    "3849708118318844348": "Secured",
-    "5273501066845923426": "Client ID",
-    "5824507108095419704": "Dark Theme",
     "5910845130937645353": "Clients",
-    "7103588127254721505": "Theme",
+    "5273501066845923426": "Client ID",
+    "3849708118318844348": "Secured",
+    "1608189940668086137": "Backend Authentication",
+    "5753263851004938421": "Backend Credentials",
+    "5805647457072079630": "Frontend Authentication",
+    "paginator.zeroRange": "0 in {$PH}",
+    "paginator.rangeOfLabel": "{$PH} - {$PH_1} in {$PH_2}",
     "paginator.displayPerPage": "Items per page",
     "paginator.nextPage": "Next page",
     "paginator.prevPage": "Prev page",
-    "paginator.rangeOfLabel": "{$PH} - {$PH_1} in {$PH_2}",
-    "paginator.zeroRange": "0 in {$PH}"
+    "1648472582356305138": "Light Theme",
+    "5824507108095419704": "Dark Theme",
+    "1810130218338094013": "Contrast Theme",
+    "2236258982969072392": "Example Application",
+    "7103588127254721505": "Theme",
+    "133478753074369062": "An example material design application"
   }
 }

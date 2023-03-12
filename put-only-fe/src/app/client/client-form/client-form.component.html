@@ -1,8 +1,21 @@
 <div class="wrapper mat-elevation-z8">
   <form (submit)="submit()">
-    <button mat-raised-button color="primary">Create</button>
-    <button mat-stroked-button color="warn" type="button" (click)="cancel()">
-      Cancel
-    </button>
+    <mat-form-field appearance="fill">
+      <mat-label>Client Type</mat-label>
+      <mat-select>
+        <mat-option
+          *ngFor="let clientType of clientTypes"
+          [value]="clientType.value"
+        >
+          {{ clientType.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-raised-button color="primary">Create</button>
+      <button mat-stroked-button color="warn" type="button" (click)="cancel()">
+        Cancel
+      </button>
+    </div>
   </form>
 </div>
