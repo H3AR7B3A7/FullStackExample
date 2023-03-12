@@ -119,17 +119,6 @@
             "browserTarget": "put-only-fe:build"
           }
         },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "globalMocks": [
-              "getComputedStyle",
-              "doctype",
-              "styleTransform",
-              "matchMedia"
-            ]
-          }
-        },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {

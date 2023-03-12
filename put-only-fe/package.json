@@ -6,7 +6,7 @@
     "start": "ng serve -o --configuration=en",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --no-cache",
+    "test": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest.js --config jest.config.mjs",
     "lint": "ng lint --fix",
     "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write",
     "e2e": "ng e2e",

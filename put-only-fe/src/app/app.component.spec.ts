@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { MATERIAL_SANITY_CHECKS } from '@angular/material/core'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
@@ -12,7 +13,7 @@ import { AppComponent } from '@app/app.component'
 import { appReducer, initialState } from '@app/core/state/core.reducer'
 import { DEFAULT_THEME } from '@app/core/theme'
 import { HeaderComponent } from '@app/header/header.component'
-import { describe, expect, test } from '@jest/globals'
+import { describe, expect, jest, test } from '@jest/globals'
 import { StoreModule } from '@ngrx/store'
 import { provideMockStore } from '@ngrx/store/testing'
 import { firstValueFrom } from 'rxjs'
@@ -43,6 +44,7 @@ describe('AppComponent', () => {
             core: initialState,
           },
         }),
+        { provide: MATERIAL_SANITY_CHECKS, useValue: false },
       ],
     }).compileComponents()
   })
