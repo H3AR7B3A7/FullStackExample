@@ -11,9 +11,11 @@ import { routes } from '@app/app-routing.module'
 import { AppComponent } from '@app/app.component'
 import { appReducer, initialState } from '@app/core/state/core.reducer'
 import { HeaderComponent } from '@app/header/header.component'
-import { expect } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import { StoreModule } from '@ngrx/store'
 import { provideMockStore } from '@ngrx/store/testing'
+import { first, firstValueFrom } from 'rxjs'
+import { DEFAULT_THEME } from "@app/core/theme";
 
 describe('AppComponent', () => {
   let component: AppComponent
@@ -51,28 +53,23 @@ describe('AppComponent', () => {
     fixture.detectChanges()
   })
 
-  it('should create the app', () => {
+  test('should create the app', () => {
     expect(component).toBeTruthy()
   })
 
-  it('should have a default theme of light', () => {
+  test('should have a default theme of light', async () => {
     expect(component.theme$).toBeDefined()
-    component.theme$.subscribe((theme) => {
-      console.log('theme', theme)
-      expect(theme).toEqual('lol') // ?????
-    })
+    await expect(firstValueFrom(component.theme$)).resolves.toEqual(
+      DEFAULT_THEME
+    )
   })
 
-  it('should have the side navigation panel open by default', () => {
+  test('should have the side navigation panel open by default', async () => {
     expect(component.sidenav$).toBeDefined()
-    component.sidenav$.subscribe((sidenav) => {
-      console.log(typeof sidenav, sidenav)
-      fixture.detectChanges()
-      expect(sidenav).toBe(false) // ?????
-    })
+    await expect(firstValueFrom(component.sidenav$)).resolves.toBeTruthy()
   })
 
-  it('should set the routes property to all routes with a title', () => {
+  test('should set the routes property to all routes with a title', () => {
     expect(component.routes).toBeDefined()
     expect(component.routes.length).toBeGreaterThan(0)
     component.routes.forEach((route) => {
@@ -80,7 +77,7 @@ describe('AppComponent', () => {
     })
   })
 
-  it('should dispatch an action to open the side navigation panel', () => {
+  test('should dispatch an action to open the side navigation panel', () => {
     const showSidenav = true
     const spy = jest.spyOn(component['store'], 'dispatch')
     component.openChanged(showSidenav)
