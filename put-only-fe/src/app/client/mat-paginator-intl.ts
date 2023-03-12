@@ -21,8 +21,10 @@ export function MyPaginatorIntl() {
   const paginatorIntl = new MatPaginatorIntl()
 
   paginatorIntl.itemsPerPageLabel = $localize`:@@paginator.displayPerPage:Items per page`
+  paginatorIntl.lastPageLabel = $localize`:@@paginator.lastPage:Last page`
   paginatorIntl.nextPageLabel = $localize`:@@paginator.nextPage:Next page`
   paginatorIntl.previousPageLabel = $localize`:@@paginator.prevPage:Prev page`
+  paginatorIntl.firstPageLabel = $localize`:@@paginator.firstPage:First page`
   paginatorIntl.getRangeLabel = matRangeLabelIntl
 
   return paginatorIntl

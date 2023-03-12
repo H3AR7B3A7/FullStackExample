@@ -1,7 +1,7 @@
 <div class="buttons" *ngIf="showButtons$ | async">
   <button mat-raised-button color="accent" (click)="addClicked()">
     <mat-icon>library_add</mat-icon>
-    Add Client
+    <ng-container i18n>Add Client</ng-container>
   </button>
 </div>
 <div class="view">
