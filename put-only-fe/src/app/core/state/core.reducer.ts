@@ -4,7 +4,7 @@ import { createReducer, on } from '@ngrx/store'
 
 import * as CoreActions from './core.actions'
 
-const initialState: CoreState = {
+export const initialState: CoreState = {
   currentTheme: DEFAULT_THEME,
   showSidenav: true,
 }
